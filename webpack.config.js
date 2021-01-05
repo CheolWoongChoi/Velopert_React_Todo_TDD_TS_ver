@@ -46,7 +46,7 @@ module.exports = function(env, argv) {
 					]
 				},
 				{
-					test: /\.s[ac]ss$/,
+					test: /\.(css|s[ac]ss)$/,
 					use: [
 						devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 
 						{

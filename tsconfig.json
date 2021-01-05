@@ -8,6 +8,17 @@
 			"ES2017",
 			"DOM"
 		],
-		"jsx": "react"
+		"jsx": "react",
+		"baseUrl": ".",
+		"paths": {
+			"src/*": ["src/*"],
+			"public/*": ["public/*"],
+			"images/*": ["public/images/*"],
+			"constants/*": ["src/constants"],
+			"components/*": ["src/components/*"],
+			"actionTypes/*": ["src/store/actionTypes/*"],
+			"actions/*": ["src/store/actions/*"],
+			"reducers/*": ["src/store/reducers/*"]
+		}
 	}
 }
