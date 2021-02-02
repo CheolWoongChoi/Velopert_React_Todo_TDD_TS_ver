@@ -14,13 +14,11 @@ module.exports = function(env, argv) {
 			extensions: ['.js', '.jsx', '.ts', '.tsx'],
 			alias: {
 				src: path.resolve(__dirname, 'src'),
+				store: path.resolve(__dirname, 'store'),
 				public: path.resolve(__dirname, 'public'),
 				images: path.resolve(__dirname, 'public/images'),
 				constants: path.resolve(__dirname, 'src/constants'),
 				components: path.resolve(__dirname, 'src/components'),
-				actionTypes: path.resolve(__dirname, 'src/store/actionTypes'),
-				actions: path.resolve(__dirname, 'src/store/actions'),
-				reducers: path.resolve(__dirname, 'src/store/reducers'),
 			}
 		},
 		entry: {
@@ -51,7 +49,23 @@ module.exports = function(env, argv) {
 						devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 
 						{
 							loader: 'css-loader',
-							options: { url: false, sourceMap: true } 
+							options: { 
+								importLoaders: 1,
+								modules: {
+									localIdentName: '[hash:base64:5]'
+								},
+								url: false, 
+							} 
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								postcssOptions: {
+									plugins: [
+										['autoprefixer', {}]
+									]
+								}
+							}
 						},
 						'sass-loader'
 					]

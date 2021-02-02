@@ -10,6 +10,7 @@ export function getUserProfileThunk(username: string): ThunkAction<void, RootSta
 
 		try {
 			const userProfile = await getUserProfile(username);
+			
 			dispatch(getUserProfileProfileSuccess(userProfile));
 		} catch (e) {
 			dispatch(getUserProfileError(e));
