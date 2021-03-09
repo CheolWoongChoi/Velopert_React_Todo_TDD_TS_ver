@@ -13,12 +13,15 @@ module.exports = function(env, argv) {
 		resolve: {
 			extensions: ['.js', '.jsx', '.ts', '.tsx'],
 			alias: {
-				src: path.resolve(__dirname, 'src'),
-				store: path.resolve(__dirname, 'store'),
-				public: path.resolve(__dirname, 'public'),
-				images: path.resolve(__dirname, 'public/images'),
-				constants: path.resolve(__dirname, 'src/constants'),
-				components: path.resolve(__dirname, 'src/components'),
+				'@src': path.resolve(__dirname, 'src'),
+				'@public': path.resolve(__dirname, 'public'),
+				'@images': path.resolve(__dirname, 'public/images'),
+				'@apis': path.resolve(__dirname, 'src/apis'),
+				'@constants': path.resolve(__dirname, 'src/constants'),
+				'@components': path.resolve(__dirname, 'src/components'),
+				'@pages': path.resolve(__dirname, 'src/pages'),
+				'@store': path.resolve(__dirname, 'src/store'),
+				'@hooks': path.resolve(__dirname, 'src/hooks'),
 			}
 		},
 		entry: {
