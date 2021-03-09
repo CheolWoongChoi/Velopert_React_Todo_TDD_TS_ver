@@ -5,11 +5,7 @@ import styles from './App.scss';
 const cx = classNames.bind(styles);
 
 const App = () => {
-	return (
-		<>
-			App test
-		</>
-	)
-}
+  return <>App test</>;
+};
 
 export default App;
