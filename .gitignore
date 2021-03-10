@@ -1,6 +1,7 @@
 # 디렉토리
 /build
 /node_modules
+**/__snapshots__
 
 # 파일
 package-lock.json

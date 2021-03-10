@@ -1,4 +1,4 @@
-import { GithubProfile } from 'src/api/github';
+import { GithubProfile } from '@src/api/github';
 import { getUserProfileProfileSuccess, getUserProfileError, getUserProfileRequest } from './actions';
 
 export type GithubAction = 

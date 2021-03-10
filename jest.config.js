@@ -9,7 +9,8 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/$1',
   },
   testMatch: [
-    '<rootDir>/**/*.test.(js|jsx|ts|tsx)'
+    '<rootDir>/**/Todo/*.test.(js|jsx|ts|tsx)'
   ],
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  setupFilesAfterEnv: ['./jest.setup.js'],
 };

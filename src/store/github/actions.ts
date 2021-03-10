@@ -1,5 +1,5 @@
 
-import { GithubProfile } from 'src/api/github';
+import { GithubProfile } from '@src/api/github';
 import { AxiosError } from 'axios';
 
 export const GET_USER_PROFILE_REQUEST = 'github/GET_USER_PROFILE_REQUEST' as const;

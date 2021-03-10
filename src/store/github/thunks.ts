@@ -1,7 +1,7 @@
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from '..';
 import { GithubAction } from './types';
-import { getUserProfile } from 'src/api/github';
+import { getUserProfile } from '@src/api/github';
 import { getUserProfileRequest, getUserProfileProfileSuccess, getUserProfileError} from './actions';
 
 export function getUserProfileThunk(username: string): ThunkAction<void, RootState, null, GithubAction> {
